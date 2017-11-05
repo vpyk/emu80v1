@@ -1,0 +1,10 @@
+﻿Исходный код эмулятора Emu80 v. 1.81 для ОС DOS.
+http://emu80.org
+
+For license info, see the file "COPYING"
+
+Для компиляции эмулятора требуется Turbo Assembler версии 3.1.
+
+Сборка под DOS:
+ - cd SRC
+ - make

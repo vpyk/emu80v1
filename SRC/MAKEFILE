@@ -1,0 +1,82 @@
+.AUTODEPEND
+
+emu80: emu80p.com emu80r.com emu80a.com emu80m.com
+ @echo Done
+
+emu80p.com: zloaderp.obj zemuromp.obj misc.obj zemuiop.obj emucpu.obj interf.obj last.obj zint09p.obj rkfont.obj filelst.obj
+ tlink @res_p.ls
+
+emu80r.com: zloaderr.obj zemuromr.obj misc.obj zemuior.obj emucpu.obj interf.obj last.obj zint09ar.obj rkfont.obj filelst.obj
+ tlink @res_r.ls
+
+emu80a.com: zloadera.obj zemuroma.obj misc.obj zemuioa.obj emucpu.obj interf.obj last.obj zint09ar.obj rkfont.obj filelst.obj
+ tlink @res_a.ls
+
+emu80m.com: zloaderm.obj zemuromm.obj misc.obj zemuiom.obj emucpu.obj interf.obj last.obj zint09m.obj rkfont.obj filelst.obj
+ tlink @res_m.ls
+
+zloaderp.obj: loader.asm
+ tasm zloaderp.asm /m2
+
+zloaderr.obj: loader.asm
+ tasm zloaderr.asm /m2
+
+zloadera.obj: loader.asm
+ tasm zloadera.asm /m2
+
+zloaderm.obj: loader.asm
+ tasm zloaderm.asm /m2
+
+zemuromp.obj: emurom.asm
+ tasm zemuromp.asm /m2
+
+zemuromr.obj: emurom.asm
+ tasm zemuromr.asm /m2
+
+zemuroma.obj: emurom.asm
+ tasm zemuroma.asm /m2
+
+zemuromm.obj: emurom.asm
+ tasm zemuromm.asm /m2
+
+misc.obj: misc.asm
+ tasm misc.asm /m2
+
+rkfont.obj: rkfont.asm
+ tasm rkfont.asm /m2
+
+zemuiop.obj: emucpu.asm
+ tasm zemuiop.asm /m2
+
+zemuior.obj: emucpu.asm
+ tasm zemuior.asm /m2
+
+zemuioa.obj: emucpu.asm
+ tasm zemuioa.asm /m2
+
+zemuiom.obj: emucpu.asm
+ tasm zemuiom.asm /m2
+
+zint09p.obj: int09.asm
+ tasm zint09p.asm /m2
+
+zint09m.obj: int09.asm
+ tasm zint09m.asm /m2
+
+zint09ar.obj: int09.asm
+ tasm zint09ar.asm /m2
+
+emucpu.obj: emucpu.asm
+ tasm emucpu.asm /m2
+
+interf.obj: interf.asm
+ tasm interf.asm /m2
+
+filelst.obj: filelst.asm
+ tasm filelst.asm /m2
+
+int09.obj: int09.asm
+ tasm int09.asm /m2
+
+last.obj: last.asm
+ tasm last.asm /m2

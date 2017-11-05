@@ -1,0 +1,1 @@
+zloaderm.obj+zemuromm.obj+misc.obj+rkfont.obj+zemuiom.obj+emucpu.obj+interf.obj+filelst.obj+zint09m.obj+last.obj,emu80m.com /t /x
